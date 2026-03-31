@@ -74,7 +74,7 @@ products.forEach(product => {
       </div>
         </div>
 
-        <a href="https://api.whatsapp.com/send/?phone=6285161720835&text=Halo, saya tertarik dengan ${product.name}" 
+        <a href="https://wa.me/628129937886?text=Halo%20saya%20mau%20beli%20baju%20grosir, saya tertarik dengan ${product.name}" 
            target="_blank"
            class="p-2 bg-green-50 rounded-full text-green-600 hover:bg-green-600 hover:text-white transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
