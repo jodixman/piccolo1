@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piccollo Grosir Baju</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f1eee9] font-sans text-gray-800">
+
+<header class="bg-[#163f34] text-white fixed top-0 left-0 right-0 w-full z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 md:py-4">
+
+        <div class="text-lg md:text-2xl font-bold tracking-widest shrink-0">
+            PICCOLLO
+        </div>
+
+        <nav class="hidden md:flex gap-8 text-sm tracking-wider font-medium">
+            <a href="#index.html" class="hover:text-green-400 transition">HOME</a>
+            <a href="#" class="hover:text-green-400 transition">ABOUT</a>
+            <a href="#" class="hover:text-green-400 transition">PRODUCTS</a>
+            <a href="#" class="hover:text-green-400 transition">CAMPAIGN</a>
+            <a href="index2.html" class="hover:text-green-400 transition">GALLERY</a>
+        </nav>
+
+        <div class="flex items-center gap-2 md:gap-4">
+            <a href="https://api.whatsapp.com/send/?phone=%2B6285161720835"
+               class="bg-green-600 text-white px-3 py-1.5 md:px-5 md:py-2 rounded-3xl text-[10px] md:text-sm font-bold hover:bg-green-500 transition duration-300 whitespace-nowrap uppercase">
+                Contact
+            </a>
+
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1 focus:outline-none p-2 shrink-0">
+                <span class="line1 w-5 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+                <span class="line2 w-5 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="line3 w-5 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden bg-[#0f2d25] border-t border-green-900 w-full">
+        <nav class="flex flex-col p-5 gap-4 text-xs tracking-widest font-semibold uppercase">
+            <a href="index.html" class="hover:text-green-400 py-2 border-b border-white/5">HOME</a>
+            <a href="#" class="hover:text-green-400 py-2 border-b border-white/5">ABOUT</a>
+            <a href="#" class="hover:text-green-400 py-2 border-b border-white/5">PRODUCTS</a>
+            <a href="#" class="hover:text-green-400 py-2 border-b border-white/5">CAMPAIGN</a>
+            <a href="#" class="hover:text-green-400 py-2">GALLERY</a>
+        </nav>
+    </div>
+</header>
+<div class="h-[72px] md:h-[80px]"></div>
+<!-- HEADER END -->
+<section class="bg-[#163f34] text-white p-6 md:p-12 relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-8 md:gap-10">
+
+        <div class="text-center md:text-left order-2 md:order-1">
+            <h1 class="text-5xl md:text-8xl font-extrabold opacity-90 leading-tight md:leading-none">
+                PICCOLLO
+            </h1>
+
+            <p class="mt-4 md:mt-6 text-gray-200 max-w-md mx-auto md:mx-0 text-sm md:text-base">
+                "Koleksi kaos oversized, jersey olahraga, hingga oblong basic dengan bahan premium. Harga tangan pertama, kualitas juara, siap kirim ke seluruh Indonesia."
+            </p>
+
+            <a href="https://api.whatsapp.com/send/?phone=6285161720835"
+               target="_blank"
+               class="mt-6 md:mt-8 inline-block bg-white text-black px-8 py-3 rounded-full font-bold
+                      hover:bg-black hover:text-white transition duration-300 shadow-lg">
+                Pesan Sekarang
+            </a>
+        </div>
+
+        <div class="relative order-1 md:order-2 flex flex-col items-center">
+            
+            <div class="w-full max-w-[320px] md:max-w-[420px] aspect-square bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <img id="mainImage"
+                     src="Jersey1.png"
+                     class="w-full h-full object-contain cursor-pointer hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="flex flex-row md:flex-col gap-3 mt-4 md:mt-0 md:absolute md:right-0 md:top-10">
+                <img src="Jersey2.png"
+                     class="w-14 h-14 md:w-16 md:h-16 bg-white p-1.5 rounded-lg border-2 border-transparent hover:border-green-400 cursor-pointer transition transform hover:scale-110 shadow-md"
+                     onclick="changeImage(this.src)">
+
+                <img src="Jersey3.png"
+                     class="w-14 h-14 md:w-16 md:h-16 bg-white p-1.5 rounded-lg border-2 border-transparent hover:border-green-400 cursor-pointer transition transform hover:scale-110 shadow-md"
+                     onclick="changeImage(this.src)">
+
+                <img src="Jersey1.png"
+                     class="w-14 h-14 md:w-16 md:h-16 bg-white p-1.5 rounded-lg border-2 border-transparent hover:border-green-400 cursor-pointer transition transform hover:scale-110 shadow-md"
+                     onclick="changeImage(this.src)">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- SECTIONEND -->
+
+    <section class="bg-[#e9e6df] py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Title -->
+            <h2 class="text-5xl md:text-6xl font-extrabold text-[#2d5c4d] mb-6">
+                GROSIR BAJU COWO
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-600 max-w-2xl mb-12">
+   Stok paling dicari: Jersey olahraga dry-fit dan kaos oblong cotton combed. Bahan adem, jahitan rantai standar distro, dan tersedia dalam berbagai pilihan warna maskulin. Siap isi rak tokomu sekarang!
+            </p>
+
+            <!-- Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="Baju1.png"
+                        class="w-full h-[420px] object-cover transition duration-500 group-hover:scale-110">
+
+<a href="https://api.whatsapp.com/send/?phone=6285161720835"
+   target="_blank"
+   class="absolute bottom-4 left-4 bg-white text-black px-5 py-2 rounded-lg shadow
+          hover:bg-black hover:text-white
+          cursor-pointer transition duration-300">
+    Pesan
+</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="Baju2.png"
+                        class="w-full h-[420px] object-cover transition duration-500 group-hover:scale-110">
+
+<a href="https://api.whatsapp.com/send/?phone=6285161720835"
+   target="_blank"
+   class="absolute bottom-4 left-4 bg-white text-black px-5 py-2 rounded-lg shadow
+          hover:bg-black hover:text-white
+          cursor-pointer transition duration-300">
+    Pesan
+</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative group overflow-hidden rounded-2xl">
+                    <img src="Baju3.png"
+                        class="w-full h-[420px] object-cover transition duration-500 group-hover:scale-110">
+
+<a href="https://api.whatsapp.com/send/?phone=6285161720835"
+   target="_blank"
+   class="absolute bottom-4 left-4 bg-white text-black px-5 py-2 rounded-lg shadow
+          hover:bg-black hover:text-white
+          cursor-pointer transition duration-300">
+    Pesan
+</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PESAN ENDD -->
+
+<section class="bg-[#f3efe9]">
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+
+        <div class="bg-[#1f4d3f] text-white p-8 md:p-16 lg:p-24 flex flex-col justify-center order-2 md:order-1">
+
+            <span class="text-green-400 font-black tracking-[0.2em] mb-4 text-xs md:text-sm uppercase italic">Premium Collection</span>
+            
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.9] mb-6 italic tracking-tighter uppercase">
+                Temukan <br> 
+                Baju Grosir <br> 
+                Cowo!!
+            </h2>
+
+            <p class="text-white/60 text-sm md:text-lg max-w-md mb-10 leading-relaxed font-medium">
+                Buat kamu yang mau mulai bisnis atau stok toko, nggak usah bingung lagi. Koleksi oblong polos dan jersey kita selalu update. Kualitas distro harga tetap grosiran.
+            </p>
+
+            <div class="flex md:grid md:grid-cols-3 gap-4 mb-12 overflow-x-auto no-scrollbar pb-4 md:pb-0">
+                <div class="thumb-item shrink-0 bg-white/10 hover:bg-white rounded-[1.5rem] p-3 w-28 h-28 md:w-full md:h-32 flex items-center justify-center cursor-pointer border-2 border-transparent hover:border-green-400 transition-all group" 
+                     onclick="updateMainImage('Bal1.png', this)">
+                    <img src="Bal1.png" class="h-full object-contain group-hover:scale-110 transition">
+                </div>
+
+                <div class="thumb-item shrink-0 bg-white/10 hover:bg-white rounded-[1.5rem] p-3 w-28 h-28 md:w-full md:h-32 flex items-center justify-center cursor-pointer border-2 border-transparent hover:border-green-400 transition-all group opacity-50" 
+                     onclick="updateMainImage('Bal2.png', this)">
+                    <img src="Bal2.png" class="h-full object-contain group-hover:scale-110 transition">
+                </div>
+
+                <div class="thumb-item shrink-0 bg-white/10 hover:bg-white rounded-[1.5rem] p-3 w-28 h-28 md:w-full md:h-32 flex items-center justify-center cursor-pointer border-2 border-transparent hover:border-green-400 transition-all group opacity-50" 
+                     onclick="updateMainImage('Bal3.png', this)">
+                    <img src="Bal3.png" class="h-full object-contain group-hover:scale-110 transition">
+                </div>
+            </div>
+
+            <a href="https://wa.me/6285161720835"
+               class="bg-white text-[#1f4d3f] px-10 py-4 rounded-2xl w-full md:w-fit font-black text-center shadow-xl hover:bg-green-400 hover:text-white active:scale-95 transition-all duration-300 uppercase italic">
+                Explore More
+            </a>
+        </div>
+
+        <div class="relative flex items-center justify-center bg-[#eae7e1] overflow-hidden order-1 md:order-2 py-12 md:py-0">
+            <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                <span class="text-[20vw] font-black italic select-none">PICCOLLO</span>
+            </div>
+            
+            <img id="mainDisplay" src="Bal1.png" 
+                 class="relative z-10 w-[70%] md:h-[75%] object-contain transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] drop-shadow-2xl">
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function updateMainImage(imgSrc, element) {
+        const mainImg = document.getElementById('mainDisplay');
+        
+        // Animasi transisi
+        mainImg.style.transform = 'scale(0.8) translateY(20px)';
+        mainImg.style.opacity = '0';
+        
+        setTimeout(() => {
+            mainImg.src = imgSrc;
+            mainImg.style.transform = 'scale(1) translateY(0)';
+            mainImg.style.opacity = '1';
+        }, 300);
+
+        // Update UI Thumbnail
+        document.querySelectorAll('.thumb-item').forEach(thumb => {
+            thumb.classList.add('opacity-50');
+            thumb.classList.remove('bg-white', 'border-green-400');
+        });
+        
+        element.classList.remove('opacity-50');
+        element.classList.add('bg-white', 'border-green-400');
+    }
+</script>
+
+<style>
+    /* Hilangkan scrollbar di mobile */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+<!-- BAL END -->
+
+
+<section class="max-w-7xl mx-auto px-6 py-12 md:py-24">
+
+  <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6 text-center md:text-left">
+    <div class="fade-in">
+      <span class="text-green-600 font-black tracking-widest text-[10px] md:text-xs uppercase mb-2 block italic"></span>
+      <h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-[#163f34] leading-[0.9] italic tracking-tighter uppercase">
+        Semua Product <br> 
+        <span class="text-green-500">Ready Stock</span>
+      </h2>
+    </div>
+
+    <div class="max-w-[250px] md:max-w-xs">
+        <p class="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-tighter leading-tight italic">
+          Kami sudah berjualan grosir <br class="hidden md:block"> dari tahun 2002.
+        </p>
+        <div class="h-1.5 w-full bg-gray-200 mt-4 rounded-full overflow-hidden">
+            <div class="h-full bg-green-500 w-1/2 rounded-full"></div>
+        </div>
+    </div>
+  </div>
+
+  <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+      
+      <div class="group bg-white rounded-[2.5rem] p-5 shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="relative overflow-hidden rounded-[2rem] aspect-[4/5] mb-6 bg-[#f9f9f9]">
+              <div class="absolute top-4 left-4 z-10 bg-green-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase italic shadow-md">Best Seller</div>
+              <img src="Baju1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Product">
+          </div>
+          <div class="flex justify-between items-center px-2 pb-2">
+              <div class="max-w-[70%]">
+                  <h3 class="font-black text-xl text-[#163f34] uppercase italic leading-none truncate">Oversize Basic</h3>
+                  <p class="text-gray-400 text-[10px] md:text-xs font-bold mt-1 uppercase tracking-widest">Cotton Combed 24s</p>
+              </div>
+              <a href="https://wa.me/6285161720835" class="bg-[#163f34] text-white p-4 rounded-2xl hover:bg-green-500 transition-all shadow-lg active:scale-90 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4" />
+                </svg>
+              </a>
+          </div>
+      </div>
+
+  </div>
+
+</section>
+<script src="products.js"></script>
+<!-- PRODUCT -->
+
+<section class="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center px-6 md:px-16 lg:px-24 font-sans group">
+  
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="Jahit1.png" 
+      alt="Proses Produksi Konveksi" 
+      class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent md:from-black/70 md:via-black/20"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl fade-in">
+    
+    <div class="flex items-center gap-3 mb-6">
+        <div class="h-[2px] w-8 bg-green-500"></div>
+        <span class="text-green-400 font-black tracking-[0.3em] text-[10px] md:text-xs uppercase italic">
+            First-Hand Factory Supply
+        </span>
+    </div>
+
+    <h1 class="text-white font-black italic uppercase leading-[0.9] text-5xl md:text-7xl lg:text-8xl tracking-tighter mb-8 drop-shadow-2xl">
+      Partner Produksi <br class="hidden md:block" />
+      <span class="text-green-500">Terpercaya</span> <br class="md:hidden" /> 
+      Skala Nasional
+    </h1>
+    
+    <p class="text-gray-200 text-sm md:text-lg lg:text-xl max-w-2xl font-medium leading-relaxed drop-shadow-lg opacity-90 mb-10">
+      Kami memahami bahwa <span class="text-white font-bold">konsistensi</span> adalah kunci bisnis Anda. Sebagai pusat konveksi tangan pertama, kami menawarkan solusi <span class="italic underline decoration-green-500">supply chain</span> yang stabil untuk kebutuhan Jersey dan Kaos Anda.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://wa.me/6285161720835" 
+           class="bg-green-600 text-white px-10 py-4 rounded-2xl font-black text-center shadow-[0_10px_20px_rgba(22,163,74,0.4)] hover:bg-white hover:text-black active:scale-95 transition-all duration-300 uppercase italic">
+            Mulai Kerjasama
+        </a>
+        <a href="#productList" 
+           class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-2xl font-black text-center hover:bg-white hover:text-black transition-all duration-300 uppercase italic">
+            Lihat Produk
+        </a>
+    </div>
+  </div>
+
+  <div class="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce opacity-50">
+      <span class="text-white text-[10px] font-bold uppercase tracking-widest">Scroll</span>
+      <div class="w-[1px] h-10 bg-white"></div>
+  </div>
+
+</section>
+<section class="py-16 px-4 md:px-10">
+
+    <header class="text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-black italic uppercase tracking-tighter text-custom-green">
+            Bukti Pengriman
+        </h1>
+    </header>
+
+    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 max-w-7xl mx-auto">
+        </div>
+
+    </section>
+    <script src="blog.js"></script>
+
+
+
+
+    <!-- DAPATKAN BARANG GROSIR MURAH -->
+ <section class="bg-[#1B3022] min-h-[500px] w-full flex items-center justify-center p-6 md:p-12 lg:p-20">
+  <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    <div class="order-2 md:order-1 flex flex-col items-start text-white">
+      <h1 class="text-5xl md:text-7xl font-black italic leading-[0.9] tracking-tighter uppercase mb-6">
+        Dapatkan Barang  <br> Grosir Termurah
+      </h1>
+      
+      <p class="text-lg md:text-xl font-light text-gray-300 mb-10 max-w-md">
+        Pembelian di atas 10 Bal dapat DiSKON %
+      </p>
+      
+      <a href="#" class="bg-white text-black px-8 py-3 rounded-xl font-bold text-lg hover:bg-gray-200 transition-colors">
+        Shop Now
+      </a>
+    </div>
+
+    <div class="order-1 md:order-2 w-full h-full">
+      <img 
+        src="Orang1.png" 
+        alt="Woman packing bag" 
+        class="w-full h-full object-cover rounded-[32px] shadow-2xl"
+      />
+    </div>
+
+  </div>
+</section>
+
+    <footer class="bg-[#e9e5dc] py-16">
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+            <div>
+
+                <h3 class="text-2xl font-bold text-[#163f34]">
+                    PICOLLO
+                </h3>
+
+                <p class="text-gray-500 mt-4">
+                    Grosir Baju termurah di indonesia, dan terpercaya di indonesia. 
+                </p>
+
+            </div>
+
+            <div>
+
+<div>
+<div>
+    <ul class="space-y-2 text-gray-500">
+        <li>
+            <a href="#" class="hover:text-gray-900 transition duration-200 cursor-pointer">
+                About
+            </a>
+        </li>
+        <li>
+            <a href="#" class="hover:text-gray-900 transition duration-200 cursor-pointer">
+                Products
+            </a>
+        </li>
+        <li>
+            <a href="#" class="hover:text-gray-900 transition duration-200 cursor-pointer">
+                Contact
+            </a>
+        </li>
+        <li>
+            <a href="#" class="hover:text-gray-900 transition duration-200 cursor-pointer">
+                Privacy Policy
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+
+            </div>
+
+            <div>
+
+
+<button class="bg-[#163f34] text-white px-6 py-3 rounded w-full cursor-pointer transition duration-300 ease-in-out hover:bg-[#0c2b21]" onclick="window.open('https://api.whatsapp.com/send?phone=628xxxxxxxxx&text=Halo%20saya%20tertarik%20dengan%20produk%20anda', '_blank')">
+  Subscribe
+</button>
+
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+   <a href="https://api.whatsapp.com/send/?phone=%2B6285161720835&text&type=phone_number&app_absent=0" target="_blank"
+        class="fixed bottom-8 right-8 animate-bounce bg-green-500 hover:bg-green-600 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-xl transition z-50">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="white">
+            <path
+                d="M16 .4C7.3.4.3 7.3.3 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.3 4.9 2 7.7 2 8.7 0 15.7-7 15.7-15.6S24.7.4 16 .4zm0 28.5c-2.4 0-4.7-.7-6.6-1.9l-.5-.3-4.9 1.3 1.3-4.7-.3-.5c-1.3-2-2-4.3-2-6.8C3 8.6 9 2.6 16 2.6S29 8.6 29 16s-6 12.9-13 12.9zm7.3-9.6c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.7-.2-1 .2s-1.1 1.3-1.3 1.6c-.2.2-.4.3-.8.1-2.4-1.2-4-2.2-5.6-5-.4-.6.4-.6 1.1-2 .1-.2.1-.5 0-.7s-1-2.4-1.4-3.2c-.4-.9-.8-.8-1-.8h-.9c-.3 0-.7.1-1 .5s-1.3 1.2-1.3 2.9 1.3 3.3 1.5 3.5c.2.2 2.6 4 6.4 5.6.9.4 1.6.6 2.2.8.9.3 1.7.2 2.4.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5z" />
+        </svg>
+
+    </a>
+
+<script>
+    // Image Switcher
+    function changeImage(src) {
+        document.getElementById('mainImage').src = src;
+    }
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-menu');
+    const lines = document.querySelectorAll('#hamburger-btn span');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        // Simple hamburger animation
+        lines[0].classList.toggle('rotate-45');
+        lines[0].classList.toggle('translate-y-2');
+        lines[1].classList.toggle('opacity-0');
+        lines[2].classList.toggle('-rotate-45');
+        lines[2].classList.toggle('-translate-y-2');
+    });
+</script>
+
+</body>
+</html>
